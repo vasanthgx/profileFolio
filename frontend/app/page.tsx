@@ -1,3 +1,5 @@
+'use client';
+import { ProfileForm } from '@/components/react-hook-form/ProfileForm';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
 
@@ -51,6 +53,7 @@ export default async function Home() {
               <div
                 key={index}
                 className="relative p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                onClick={() => alert('Please')}
               >
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   {index + 1}
@@ -60,6 +63,7 @@ export default async function Home() {
               </div>
             ))}
           </div>
+          <ProfileForm />
         </section>
 
         {/* Feature Section */}
